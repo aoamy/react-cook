@@ -1,0 +1,1157 @@
+
+html, body, #app{
+	height : 100%;
+}
+body, ul, ol, p, li, dt, dl, h5{
+	padding : 0;
+	margin  : 0;
+}
+#app{
+	background : url("../img/bg.png");
+}
+
+$width:100%;
+$color:#ffffff;
+$hidden:hidden;
+$position:relative absolute;
+%h1{
+	color : #d4d4d4;
+}
+%h2{
+	color  : #6d6d6d;
+	margin : 0 5px;
+}
+%h3{
+	width         : 40px;
+	height        : 40px;
+}
+%h{box-sizing:border-box;}
+
+
+// 启动页
+.startup{
+	width                   : $width;
+	height                  : $width;
+	background              : url("../img/bg-startup.jpg");
+	-webkit-background-size : cover;
+	background-size         : cover;
+}
+ul > li{
+	list-style : none;
+}
+.app{
+	width      : $width;
+	//height   : 100%;
+	overflow   : $hidden;
+	//background : #353535;
+	background : url("../img/bg.png");
+}
+.container{
+	width : $width;
+	color : $color;
+}
+.fa-heart{
+	color : #c01b1b;
+}
+.fa-star{ color : #bf1616 }
+
+// 首页-------------------------------------------
+.list{
+	width         : $width;
+	//height  : 50px;
+	padding       : 2% 4%;
+	border-bottom : 1px solid #1e1e1e;
+	//overflow: hidden;
+}
+.list > span{
+	font-size  : 1.8rem;
+	& i{
+		color : $color;
+		//line-height : 50px;
+	}
+	color      :$color;
+	@extend %h;
+	&:nth-child(2){ margin-left : 40% }
+	&:last-child{ float : right }
+}
+.lists{
+	width         : 95%;
+	border-radius : 10px;
+	margin        : 0 auto 5% auto;
+	position      : nth($position,1);
+}
+/*.title{
+	//border           : 1px solid blue;
+	width            : 100%;
+	height           : 24%;
+	h5{
+		font-size : 1.1rem;
+	}
+	p{
+		font-size : 1rem;
+	}
+	color            : #000000;
+	background-color : rgba(255, 255, 255, 0.7);
+	border-radius    : 0 0 10px 10px;
+	box-sizing       : border-box;
+	overflow         : hidden;
+	position         : absolute;
+	bottom           : 0;
+	& > .message{
+		box-sizing    : border-box;
+		overflow      : hidden;
+		text-overflow : ellipsis;
+		position      : absolute;
+		left          : 12%;
+		top           : 0;
+	}
+	& > .give-heart{
+		//height      : 100%;
+		text-align  : center;
+		//padding      : 2%;
+		border-left : 1px solid #ffffff;
+		box-sizing  : border-box;
+		overflow    : hidden;
+		position    : absolute;
+		left        : 86%;
+		top         : 0;
+		& > i{
+			font-size : 1rem;
+		}
+	}
+}*/
+.head-photo{
+	@extend %h3;
+	@extend %h;
+	overflow      : $hidden;
+	border-radius : 20%;
+	margin        : 2%;
+}
+/*.search{
+	//border:1px solid red;
+	color            : #ffffff;
+	width            : 95%;
+	border-radius    : 20px 20px 0 0;
+	margin           : 0 auto;
+	background-color : rgba(53, 53, 53, 0.8);
+	text-align       : center;
+	position         : fixed;
+	top              : 66%;
+	left             : 2.5%;
+	& > .search-input{
+		width         : 80%;
+		border        : 1px solid #ffffff;
+		border-radius : 30px;
+		margin        : 30px auto;
+		//text-align: center;
+		& > label{
+			& > input{
+				background : none;
+				border     : none;
+				outline    : none;
+			}
+			& > *{
+				color : #ffffff;
+			}
+		}
+
+	}
+	& > .foots{
+		box-sizing : border-box;
+		margin     : 0 auto;
+		& > .photobox{
+			width      : 80px;
+			height     : 80px;
+			box-sizing : border-box;
+			float      : left;
+			margin     : 6%;
+		}
+	}
+}*/
+.button{
+	@extend %h3;
+	border           : none;
+	outline          : none;
+	border-radius    : 8px;
+	background-color : rgba(53, 53, 53, 0.7);
+	position         :  nth($position,2);
+	right            : 10%;
+	top              : 50%;
+	& > i{
+		color : $color;
+	}
+}
+//登录页面---------------------------------------------
+.app-bg{
+	background      : url("../img/bg-startup.jpg");
+	background-size : cover;
+	//opacity:0.7;
+	height          : $width;
+	& > .list{
+		border-bottom : none;
+		& a{ color : $color; }
+	}
+}
+.cont{
+	text-align : center;
+	& > form{
+		& > .btn{
+			width         : 85%;
+			border-radius : 20px;
+			margin        : 10% auto 2% auto;
+			&:focus{
+				outline : none;
+			}
+		}
+		& a{ color : $color; }
+	}
+;
+}
+.header{
+	width            : 80px;
+	height           : 80px;
+	border-radius    : 50%;
+	background-color : $color;
+	margin           : 10% auto 10% auto;
+	@extend %h;
+	& > img{
+		margin : 20%;
+	}
+}
+.login-list{
+	width         : 85%;
+	//text-align: center;
+	margin        : 0 auto;
+	padding       : 2%;
+	border-bottom : 1px solid #ffffff;
+	& > input{
+		margin-left : 4%;
+		width       : 60%;
+		background  : none;
+		border      : none;
+		outline     : none;
+	}
+}
+#third-party{
+	margin : 20% 0 10% 0;
+	& > p{
+		margin-bottom : 4%;
+	}
+	& > a{
+		color        : $color;
+		font-size    : 2em;
+		margin-right : 8%;
+	}
+}
+// 分类----------------------------------------------------------
+.classify{
+	position :  nth($position,1);
+}
+//分类左边----
+.diff-left{
+	//border:1px solid red;
+	width     : 30%;
+	font-size : 1.5rem;
+	//height: 100%;
+	margin    : 40% 0 2% 5%;
+	position  :  nth($position,2);
+	top       : 0;
+	left      : 0;
+}
+.diff-class{
+	//border:1px solid red;
+	padding : 40% 1%;
+	& > li{
+		//border:1px solid red;
+		margin         : 15% 0;
+		letter-spacing : 8px;
+		& > *{
+			font-size       : 1.4rem;
+			color           : $color;
+			text-decoration : none;
+			&:hover, &:active, &:focus{
+				color : #ff0000;
+			}
+		}
+	}
+}
+.diff-bottom{
+	//border:1px solid red;
+	color      : #444444;
+	margin-top : 100%;
+}
+.diff-right{
+	width    : 90%;
+	position :  nth($position,1);
+	top      : 5%;
+	left     : 35%;
+}
+.diff-lists{
+	height        : 25%;
+	//width : 100%;
+	border-radius : 10px;
+	margin        : 0 auto 5% auto;
+	position      :  nth($position,1);
+	img{
+		width  : $width;
+		height : $width;
+	}
+}
+
+// 我的 本大厨
+.app-height{ height : $width }
+
+.user-left{
+	width    : 90%;
+	position :  nth($position,1);
+	left     : -30%;
+	top      : 5%;
+}
+.users{
+	width      : 30%;
+	font-size  : 1.5rem;
+	text-align : right;
+	position   :  nth($position,2);
+	left       : 60%;
+	top        : 30%;
+	.user{
+		margin-bottom : 50%;
+		& > li{
+			margin : 5% 0;
+			& > a{
+				color           : $color;
+				text-decoration : none;
+			}
+		}
+	}
+	.user-span{
+		color : #444444;
+	}
+}
+// 菜单-------------------------------------------
+.menu-lists, .cookbook-img{
+	width         : $width;
+	border-radius : 10px;
+	box-shadow    : 2px 2px 3px #a4a4a4;
+	@extend %h;
+	overflow      : $hidden;
+}
+.menu-lists{
+	//border     : 1px solid red;
+	color      : #000000;
+	height     : 33%;
+	background : $color;
+	position   :  nth($position,1);
+	& > img{
+		width  : 50%;
+		height : $width;
+	}
+	& > .position{
+		position :  nth($position,2);
+		top      : 0;
+		left     : 50%;
+	}
+	.word-posi{
+		position :  nth($position,2);
+		top      : 0;
+	}
+	.img-position{
+		position :  nth($position,1);
+		top      : 0;
+		left     : 50%;
+	}
+	& > .words{
+		width      : 50%;
+		height     :$width;
+		text-align : center;
+		h4{ font-size : 2rem; }
+		p{ font-size : 1.4rem; }
+		& > .one{
+			color : #360a47;
+		}
+		& > .two{
+			color : #a0622f;
+		}
+		& > .many{
+			color : #d81818;
+		}
+		& > .right{
+			margin-left   : 70%;
+			margin-bottom : 10%;
+		}
+		& > .left{
+			margin-right  : 70%;
+			margin-bottom : 10%;
+		}
+		& > .p{
+			@extend %h1;
+			margin-top : 30%;
+
+			& > span{
+				@extend %h2;
+			}
+		}
+	}
+}
+
+// 菜谱前奏
+.containers{
+	width : $width;
+	//height      : 100%;
+}
+.cookbook-img{
+	height : 30%;
+}
+.cookbook-box{
+	//border:1px solid red;
+	color      : #000000;
+	width      : $width;
+	height     : 5%;
+	text-align : center;
+	background : $color;
+	padding    : 10px 0;
+	& > h4{
+		color : #fdaf00;
+		& > span{
+			@extend %h1;
+			margin : 0 15px;
+		}
+	}
+	& > .cookbook-p{
+		@extend %h1;
+		& > span{
+			@extend %h2;
+		}
+	}
+}
+.red{
+	background : #c11b1b;
+	//margin: 0 auto;
+	& h3{
+		color      : $color;
+		text-align : center; }
+}
+.cookbook-lists{
+	//border        : 1px solid red;
+	width         : 32%;
+	height        : 130px;
+	border-radius : 10px;
+	margin        : 1% 1% 0 0;
+	display       : inline-block;
+	@extend %h;
+	overflow      : $hidden;
+	position      :  nth($position,1);
+	&:nth-child(3n){ margin-right : 0; }
+}
+.navlink, .navlink:hover, .selected{
+	text-decoration : none;
+}
+.ck-box{
+	width         : 40px;
+	//height: 50%;
+	color         : #000000;
+	//border        : 1px solid red;
+	background    : rgba(255, 255, 255, 0.7);
+	padding       : 10px;
+	border-radius : 0 0 8px 8px;
+	position      :  nth($position,2);
+	top           : 0;
+	left          : 60%;
+}
+// 美食展-------------------------------------------------------------
+.content{
+	padding : 0 2% 2% 2%;
+}
+.center{
+	@extend %h3;
+	//box-sizing: border-box;
+	overflow      : $hidden;
+	border-radius : 20%;
+	margin        : 10% auto 0 auto;
+}
+.words > h5{
+	font-size  : 1.5rem;
+	margin-top : 10%;
+}
+.words > .menu{
+	color : #d94618;
+}
+.words > .yellow{
+	color : #feb016;
+}
+.words > .end{
+	text-align : left;
+}
+// 美食展详情---------------------------------------------
+.pos{
+	position : nth($position,1);
+}
+.details{
+	width         : 95%;
+	//height: auto;
+	color         : #737373;
+	margin        : 0 auto;
+	border-radius : 10px 10px 0 0;
+	@extend %h;
+	overflow      : $hidden;
+	& h4{ color : #1a1a1a; }
+	& > .detail{
+		width  : $width;
+		height : 90%;
+		//box-sizing: border-box;
+		//position : relative;
+		& > .bgimage{
+			width    : $width;
+			position : nth($position,1);
+			& > .top{
+				width      : $width;
+				padding    : 1% 2% 4% 2%;
+				background : rgba(255, 255, 255, 0.1);
+				position   : nth($position,2);
+				top        : 0;
+				& > .nav-link{
+					border        : 1px solid #ff0000;
+					border-radius : 5px;
+					padding       : 1% 2%;
+					color         : #ff0000;
+					position      : nth($position,2);
+					left          : 75%;
+					top           : 50%;
+					//float: right;
+				}
+			}
+		}
+		& > .bottom{
+			border-bottom : 1px solid #d8d8d8;
+			background    : #efefef;
+			padding       : 4% 2%;
+			& > h4{
+				margin    : 0;
+				padding   : 0;
+				font-size : 2rem;
+			}
+			& > div{
+				box-sizing : border-box;
+				& > span{
+					//float: left;
+					margin-left : 4%;
+					&:first-child{
+						margin-left  : 0;
+						margin-right : 16%;
+					}
+					& > img{
+						width      : 20px;
+						height     : 15px;
+						margin     : 0 2%;
+						@extend %h;
+						overflow   : $hidden;
+					}
+				}
+			}
+		}
+	}
+}
+.down{
+	width      : $width;
+	//font-size: 20px;
+	background : rgba(255, 255, 255, 0.2);
+	text-align : center;
+	position   : nth($position,2);
+	top        : 50%;
+}
+.box{
+	width      : $width;
+	background : $color;
+	position   : nth($position,2);
+	bottom     : 0;
+	.share{
+		padding : 4%;
+		& > span:last-child{
+			float : right;
+		}
+	}
+	/*& > .icons{
+		border-top : 1px solid #d8d8d8;
+		& > div{
+			margin     : 8% 3%;
+			font-size  : 0.8rem;
+			text-align : center;
+			float      : left;
+			& > .word{
+				color : #999999;
+			}
+		}
+	}*/
+}
+// 菜谱---------------------------------------------
+.color{
+	color : #f1f1f1;
+}
+.cook-top{
+	height : 20%;
+	& > .cook-bg{
+		//border:1px solid red;
+		width                   : 50%;
+		height                  :$width;
+		background              : #ede9dd;
+		border-top-right-radius : 8px;
+		display                 : inline-block;
+		position                : nth($position ,1);
+		& > .bg{
+			width         : 70%;
+			overflow      : $hidden;
+			border-radius : 0 8px 8px 0;
+			box-shadow    : 2px 0 4px #3f3e3b;
+		}
+		& > h3{
+			font-size : 1.8rem;
+			width     : 30px;
+			color     : #000000;
+			//border:1px solid red;
+			position  : nth($position,2);
+			top       : 0;
+			left      : 78%;
+		}
+	}
+	& > .success{
+		text-align : center;
+		margin     : 10% 15% 0 0;
+		float      : right;
+		& > h3, h4{ margin : 0; padding : 0; }
+		& > h3{ color : #ce1b1b }
+		& > h4{ color : #737272 }
+	}
+}
+.cookery{
+	overflow   : $hidden;
+}
+.img-lists{
+	width : 20%;
+	float : left;
+	& > .img-list{
+		//border        : 1px solid #737272;
+		//height:16%;
+		@extend %h;
+		overflow      : $hidden;
+		border-left   : none;
+		margin        : 1% 0;
+		border-radius : 0 5px 5px 0;
+		& > img{
+			width : $width;
+		}
+	}
+}
+.ck-right{
+	width     : 80%;
+	height    : $width;
+	font-size : 1.1rem;
+	float     : right;
+	padding   : 4% 0 4% 6%;
+}
+.ck-main, .ck-second{
+	border-bottom : 2px solid #1e1e1e;
+	padding       : 2% 0;
+}
+.ck-method{
+	padding-top : 2%;
+	& > .img{
+		width         : 80%;
+		margin        : 4% auto;
+		border-radius : 10px;
+		@extend %h;
+		overflow      : $hidden;
+		& > img{
+			width : $width;
+		}
+	}
+	& > .last{
+		padding : 0 4% 0 8%;
+	}
+}
+.ck-btn{
+	padding       : 1% 2%;
+	border-radius : 5px;
+	margin-right  : 2%;
+}
+.main{ background : #cd1b1b }
+.second{
+	background : #4c4848;
+}
+.method{
+	background : #0a5411;
+}
+/*当页面的宽度在768px ~ 1024之间的时候*/
+@media screen and (min-width : 768px)  {
+	body{
+		font-size : 20px;
+	}
+	// 首页 分类等结构相同部分
+	.lists{
+		width         : 95%;
+		border-radius : 10px;
+		margin        : 0 auto 5% auto;
+		position      : relative;
+		//height: 400px;
+	}
+	.title{
+		//border           : 1px solid blue;
+		width            : 100%;
+		height           : 24%;
+		h5{
+			font-size : 2rem;
+		}
+		p{
+			font-size : 1.5rem;
+		}
+		color            : #000000;
+		background-color : rgba(255, 255, 255, 0.7);
+		border-radius    : 0 0 10px 10px;
+		box-sizing       : border-box;
+		overflow         : hidden;
+		position         : absolute;
+		bottom           : 0;
+		//&>*{
+		//	display: inline-block;
+		//	float: left;
+		//}
+		& > .head-photo{
+			width         : 70px;
+			height        : 70px;
+			//box-sizing: border-box;
+			overflow      : hidden;
+			border-radius : 20%;
+			position      : absolute;
+			top           : 5%;
+		}
+		& > .message{
+			//padding        : 2% ;
+			box-sizing    : border-box;
+			overflow      : hidden;
+			text-overflow : ellipsis;
+			position      : absolute;
+			left          : 14%;
+			top           : 25%;
+		}
+		& > .give-heart{
+			height      : 100%;
+			text-align  : center;
+			padding     : 2%;
+			border-left : 1px solid #ffffff;
+			box-sizing  : border-box;
+			overflow    : hidden;
+			position    : absolute;
+			left        : 86%;
+			top         : 0;
+			& > i{
+				font-size : 2rem;
+			}
+		}
+	}
+	// 首页搜索部分
+	.search{
+		//border:1px solid red;
+		color            : #ffffff;
+		width            : 95%;
+		border-radius    : 20px 20px 0 0;
+		margin           : 0 auto;
+		background-color : rgba(53, 53, 53, 0.8);
+		text-align       : center;
+		position         : fixed;
+		bottom           : 0;
+		left             : 2.5%;
+		& > .search-input{
+			width         : 80%;
+			border        : 1px solid #ffffff;
+			border-radius : 30px;
+			margin        : 30px auto;
+			//text-align: center;
+			& > label{
+				& > input{
+					background : none;
+					border     : none;
+					outline    : none;
+				}
+				& > *{
+					color : #ffffff;
+				}
+			}
+
+		}
+		& > .foots{
+			width      : 80%;
+			box-sizing : border-box;
+			margin     : 0 auto;
+			//text-align: center ;
+			overflow   : hidden;
+			& > .photobox{
+				width      : 100px;
+				height     : 100px;
+				box-sizing : border-box;
+				float      : left;
+				margin     : 6% 0;
+				&:nth-child(2) {
+					margin-left:25%;
+					//margin-right:5%;
+				}
+				&:last-child{ float : right; }
+				& > img{
+					width  : 90px;
+					height : 70px;
+				}
+			}
+		}
+	}
+	//美食展详情分享框
+	.box{
+		& > .icons{
+			border-top : 1px solid #d8d8d8;
+			margin: 0 auto;
+			& > div{
+				margin     : 8% 4%;
+				font-size  : 1.7rem;
+				text-align : center;
+				float      : left;
+				//&:last-child{float: right ;}
+				& > .word{
+					color : #999999;
+				}
+			}
+		}
+	}
+}
+/*当页面的宽度在361px ~ 767px之间的时候*/
+@media screen and (min-width : 400px) and (max-width : 767px) {
+	body{
+		font-size : 16px;
+	}
+	// 首页 分类等结构相同部分
+	.lists{
+		width         : 95%;
+		border-radius : 10px;
+		margin        : 0 auto 5% auto;
+		position      : relative;
+		//height: 400px;
+	}
+	.title{
+		//border           : 1px solid blue;
+		width            : 100%;
+		height           : 24%;
+		h5{
+			font-size : 1.1rem;
+		}
+		p{
+			font-size : 1rem;
+		}
+		color            : #000000;
+		background-color : rgba(255, 255, 255, 0.7);
+		border-radius    : 0 0 10px 10px;
+		box-sizing       : border-box;
+		overflow         : hidden;
+		position         : absolute;
+		bottom           : 0;
+		//&>*{
+		//	display: inline-block;
+		//	float: left;
+		//}
+		& > .head-photo{
+			width         : 40px;
+			height        : 40px;
+			//box-sizing: border-box;
+			overflow      : hidden;
+			border-radius : 20%;
+			position      : absolute;
+			top           : 0;
+			//margin        : 2%;
+		}
+		& > .message{
+			padding       : 2%;
+			box-sizing    : border-box;
+			overflow      : hidden;
+			text-overflow : ellipsis;
+			position      : absolute;
+			left          : 14%;
+			top           : 0;
+		}
+		& > .give-heart{
+			//height      : 100%;
+			text-align  : center;
+			padding     : 2%;
+			border-left : 1px solid #ffffff;
+			box-sizing  : border-box;
+			overflow    : hidden;
+			position    : absolute;
+			left        : 86%;
+			top         : 0;
+			& > i{
+				font-size : 1rem;
+			}
+		}
+	}
+	// 首页搜索部分
+	.search{
+		//border:1px solid red;
+		color            : #ffffff;
+		width            : 95%;
+		border-radius    : 20px 20px 0 0;
+		margin           : 0 auto;
+		background-color : rgba(53, 53, 53, 0.8);
+		text-align       : center;
+		position         : fixed;
+		bottom           : 0;
+		left             : 2.5%;
+		& > .search-input{
+			width         : 80%;
+			border        : 1px solid #ffffff;
+			border-radius : 30px;
+			margin        : 30px auto;
+			//text-align: center;
+			& > label{
+				& > input{
+					background : none;
+					border     : none;
+					outline    : none;
+				}
+				& > *{
+					color : #ffffff;
+				}
+			}
+
+		}
+		& > .foots{
+			width      : 80%;
+			box-sizing : border-box;
+			margin     : 0 auto;
+			//text-align: center ;
+			overflow   : hidden;
+			& > .photobox{
+				//border:1px solid red;
+				width      : 80px;
+				height     : 80px;
+				box-sizing : border-box;
+				float      : left;
+				margin     : 6% 0;
+				&:nth-child(2) {
+					margin-left:15%;
+					margin-right:5%;
+				}
+				&:last-child{ float : right; }
+				& > img{
+					width  : 50px;
+					height : 40px;
+				}
+			}
+		}
+	}
+	//美食展详情分享框
+	.box{
+		& > .icons{
+			border-top : 1px solid #d8d8d8;
+			margin: 0 auto;
+			& > div{
+				margin     : 8% 2%;
+				font-size  : 1rem;
+				text-align : center;
+				float      : left;
+				//&:last-child{float: right ;}
+				& > .word{
+					color : #999999;
+				}
+			}
+		}
+	}
+}
+/*当页面的宽度在399px以下的时候*/
+@media screen and (max-width : 399px) {
+	body{
+		font-size : 14px;
+	}
+	// 首页 分类等结构相同部分
+	.lists{
+		width         : 95%;
+		border-radius : 10px;
+		margin        : 0 auto 5% auto;
+		position      : relative;
+		//height: 400px;
+	}
+	.title{
+		//border           : 1px solid blue;
+		width            : 100%;
+		height           : 24%;
+		h5{
+			font-size : 1.1rem;
+		}
+		p{
+			font-size : 1rem;
+		}
+		color            : #000000;
+		background-color : rgba(255, 255, 255, 0.7);
+		border-radius    : 0 0 10px 10px;
+		box-sizing       : border-box;
+		overflow         : hidden;
+		position         : absolute;
+		bottom           : 0;
+
+		& > .head-photo{
+			width         : 40px;
+			height        : 40px;
+			//box-sizing: border-box;
+			overflow      : hidden;
+			border-radius : 20%;
+			margin        : 0 2% 0 1%;
+		}
+		& > .message{
+			padding       : 2%;
+			box-sizing    : border-box;
+			overflow      : hidden;
+			text-overflow : ellipsis;
+			position      : absolute;
+			left          : 14%;
+			top           : 0;
+		}
+		& > .give-heart{
+			//height      : 100%;
+			text-align  : center;
+			padding     : 2%;
+			border-left : 1px solid #ffffff;
+			box-sizing  : border-box;
+			overflow    : hidden;
+			position    : absolute;
+			left        : 86%;
+			top         : 0;
+			& > i{
+				font-size : 1rem;
+			}
+		}
+	}
+	// 首页搜索部分
+	.search{
+		//border:1px solid red;
+		color            : #ffffff;
+		width            : 95%;
+		border-radius    : 20px 20px 0 0;
+		margin           : 0 auto;
+		background-color : rgba(53, 53, 53, 0.8);
+		text-align       : center;
+		position         : fixed;
+		bottom           : 0;
+		left             : 2.5%;
+		& > .search-input{
+			width         : 80%;
+			border        : 1px solid #ffffff;
+			border-radius : 30px;
+			margin        : 30px auto;
+			//text-align: center;
+			& > label{
+				& > input{
+					background : none;
+					border     : none;
+					outline    : none;
+				}
+				& > *{
+					color : #ffffff;
+				}
+			}
+
+		}
+		& > .foots{
+			width      : 80%;
+			box-sizing : border-box;
+			margin     : 0 auto;
+			overflow   : hidden;
+			//text-align: center ;
+			& > .photobox{
+				width      : 70px;
+				height     : 60px;
+				box-sizing : border-box;
+				float      : left;
+				margin     : 6% 0;
+				&:nth-child(2) {
+					margin-left:8%;
+					margin-right:5%;
+				}
+				&:last-child{ float : right; }
+				& > img{
+					width  : 50px;
+					height : 40px;
+				}
+			}
+		}
+	}
+	// 菜单
+	.menu-lists{
+		//border     : 1px solid red;
+		color      : #000000;
+		height     : 33%;
+		background : #ffffff;
+		position   : relative;
+		& > img{
+			width  : 50%;
+			height : 100%;
+		}
+		& > .position{
+			position : absolute;
+			top      : 0;
+			left     : 50%;
+		}
+		.word-posi{
+			position : absolute;
+			top      : 0;
+		}
+		.img-position{
+			position : relative;
+			top      : 0;
+			left     : 50%;
+		}
+
+		& > .words{
+			width      : 50%;
+			text-align : center;
+			height     : 100%;
+			//margin    : 4% 0;
+			h4{ font-size : 1.5rem; }
+			p{ font-size : 1.1rem; }
+			& > .one{
+				color : #360a47;
+			}
+			& > .two{
+				color : #a0622f;
+			}
+			& > .many{
+				color : #d81818;
+			}
+			& > .right{
+				margin-left   : 70%;
+				margin-bottom : 10%;
+			}
+			& > .left{
+				margin-right  : 70%;
+				margin-bottom : 10%;
+			}
+			& > .p{
+				color      : #d4d4d4;
+				margin-top : 10%;
+				//margin-bottom : 5%;
+				& > span{
+					color  : #6d6d6d;
+					margin : 0 5px;
+				}
+			}
+		}
+	}
+	//美食展详情分享框
+	.box{
+		& > .icons{
+			border-top : 1px solid #d8d8d8;
+			text-align: center ;
+			& > div{
+				margin     : 8% 2%;
+				font-size  : 0.8rem;
+				text-align : center;
+				float      : left;
+				& > .word{
+					color : #999999;
+				}
+			}
+		}
+	}
+}
